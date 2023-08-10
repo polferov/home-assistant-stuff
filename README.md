@@ -5,7 +5,7 @@
 This command must be executed on the home assistant host.
 
 ```sh
-docker run -d --restart always -v /var/run/docker.sock:/var/run/docker.sock -p 22:22 polferov/ha-stuff
+docker run -d --restart always -v /var/run/docker.sock:/var/run/docker.sock -v data:/data -p 22:22 polferov/ha-stuff
 ```
 
 The only way to access the host, as far as I am aware, is to do it physically via keyboard and display.
