@@ -1,0 +1,13 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Docker@2
+  inputs:
+    containerRegistry: 'docker'
+    command: 'login'
+- script: docker buildx create --use
+- script: docker buildx build -t polferov/ha-stuff --platform linux/arm64/v8,linux/amd64 .
