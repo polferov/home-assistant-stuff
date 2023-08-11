@@ -2,5 +2,6 @@
 
 
 service ssh start
+service cron start
 
 sleep infinity

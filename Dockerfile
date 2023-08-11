@@ -19,6 +19,7 @@ RUN apt install -y git
 RUN apt install -y openssh-server
 RUN apt install -y fish nmap
 RUN apt install -y neovim
+RUN apt install -y cron make
 
 RUN echo 'ha\nha' | passwd
 RUN echo PermitRootLogin yes >> /etc/ssh/sshd_config
